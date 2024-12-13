@@ -17,6 +17,8 @@ const theme = {
   }
 }
 
+export type ThemeType = typeof theme;
+
 class Button extends React.Component <{
     children?: React.ReactNode
 }> {
