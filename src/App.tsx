@@ -1,12 +1,12 @@
 import { Theme, GlobalStyles} from 'themes';
-import { RoutesComponent } from './routes';
+import { Routes } from 'routes';
 
 const App = () => {
   return (
-    <div>
+    <Theme>
       <GlobalStyles />
-      <RoutesComponent />
-    </div>
+      <Routes />
+    </Theme>
   );
 };
 

@@ -1,14 +1,18 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { Home } from 'pages';
-import React from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-export const RoutesComponent = () => {
+import { Home } from 'pages';
+
+export const Routes = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path="*">
+          <Redirect to="/" />
+        </Route>
+      </Switch>
     </BrowserRouter>
   );
 };
