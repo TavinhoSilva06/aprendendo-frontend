@@ -1,14 +1,16 @@
-import styled from "styled-components"
-import { layout, LayoutProps, space, SpaceProps, color, ColorProps, borderRadius, BorderRadiusProps, border, BorderProps } from "styled-system"
+import styled from "styled-components";
+import { layout, LayoutProps, space, SpaceProps, color, ColorProps, borderRadius, BorderRadiusProps, border, BorderProps } from "styled-system";
 
-type ColumnProps = LayoutProps & SpaceProps & ColorProps & BorderRadiusProps & BorderProps
+// Define um tipo combinando várias propriedades de estilo
+type ColumnProps = LayoutProps & SpaceProps & ColorProps & BorderRadiusProps & BorderProps;
 
+// Define um componente Column estilizado
 export const Column = styled.div<ColumnProps>`
   display: flex;
   flex-direction: column;
-  ${layout}
-  ${space}
-  ${color}
-  ${borderRadius}
-  ${border}
-`
+  ${layout} // Aplica propriedades de layout
+  ${space} // Aplica propriedades de espaçamento
+  ${color} // Aplica propriedades de cor
+  ${borderRadius} // Aplica propriedades de borda arredondada
+  ${border} // Aplica propriedades de borda
+`;

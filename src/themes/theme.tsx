@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 
+// Define o tema do aplicativo
 const fontSizes: any = [14, 18, 20, 96];
 fontSizes.body = fontSizes[0];
 fontSizes.bodyLarge = fontSizes[1];
@@ -23,6 +24,7 @@ const theme = {
 
 export type ThemeType = typeof theme;
 
+// Provedor de tema que passa o tema definido para todos os componentes filhos
 export const Theme: React.FC = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
