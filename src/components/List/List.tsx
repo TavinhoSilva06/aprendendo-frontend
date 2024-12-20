@@ -1,8 +1,8 @@
 import { Column } from 'components';
-import { ListItem } from './ListItem';
+import { ListItem, ListItemProps } from './ListItem';
 
 type ListProps = {
-  items: [];
+  items: ListItemProps[];
 };
 
 
