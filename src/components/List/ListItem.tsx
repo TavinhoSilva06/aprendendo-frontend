@@ -16,7 +16,7 @@ export const ListItem: React.FC<ListItemProps> = ({ label }) => {
       borderRadius="4px" // Define o border-radius (bordas arredondadas) de 4px
       borderLeft="5px solid #fff" // Define uma borda esquerda sólida de 5px e cor branca
       >
-    <Text>{label}</Text> // Renderiza o texto dentro do componente Text
+    <Text>{label}</Text> 
     </Column>
   );
 };

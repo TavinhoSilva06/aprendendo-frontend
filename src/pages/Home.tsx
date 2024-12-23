@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Input, Text, Button, Row, Column, List } from 'components';
+import { Input, Text, Button, Row, Column, List, Logo } from 'components';
 
 // Define o componente Home
 export const Home = () => {
@@ -26,7 +26,7 @@ export const Home = () => {
       </Row>
       {taskName}
 
-      <List items={tasks} /> // Renderiza a lista de tarefas
+      <List items={tasks} /> 
     </Column>
   );
 };

@@ -11,7 +11,7 @@ export const List: React.FC<ListProps> = ({ items }) => {
   return (
     <Column py="10px">
       {items.map((item, index) => (
-        <ListItem key={index} {...item} /> // Renderiza cada item da lista com suas propriedades
+        <ListItem key={index} {...item} /> 
       ))}
     </Column>
   );
