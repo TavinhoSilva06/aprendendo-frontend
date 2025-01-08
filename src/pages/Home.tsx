@@ -19,10 +19,28 @@ export const Home = () => {
 
   return (
     <Column width="600px" margin="0 auto">
+      <Column width="100%" py="25px" alignItems="center"> 
+        <Logo />
+      </Column>
+
+      <Column width="100%" minHeight="300px" p="20px" bg="rgba(255, 255, 255, 0.2)" borderRadius="4px" alignItems="center">
+        <Text fontFamily="secondary" fontSize="bodyExtraLarge">Ready</Text>
+        
+        <Text fontFamily="secondary" fontWeight="bold" fontSize="displayExtraLarge" py="30px">
+          25:00
+        </Text>
+
+        <Button variant="primary">
+          <Text fontFamily="secondary" fontSize="bodyExtraLarge" fontWeight="bold" color="primary">
+            START
+          </Text>
+        </Button>
+      </Column>
+
       <Text fontWeight="bold" fontSize="bodyLarge" my="10px" pl="10px">Tasks</Text>
       <Row width="100%">
         <Input flex={1} placeholder="Enter a task name here..." value={taskName} onChange={e => setTaskName(e.target.value)} />
-        <Button onClick={handleOKButton}>OK</Button>
+        <Button variant="primary" onClick={handleOKButton}>OK</Button>
       </Row>
       {taskName}
 

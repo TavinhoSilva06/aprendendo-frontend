@@ -1,10 +1,32 @@
 import styled from "styled-components";
+import { backgroundColor, boxShadow, variant } from "styled-system";
+
+type ButtonProps = {
+  variant: string
+}
 
 // Define um componente Button estilizado
-export const Button = styled.button`
+export const Button = styled.button<ButtonProps>`
   padding: 10px 20px;
-  background-color: transparent;
   cursor: pointer;
-  color: #fff; // Define a cor do texto como branco
-  border: 2px solid rgba(255, 255, 255, 0.2); // Define a borda do botão
+
+  ${variant({
+    variants: {
+      default: {
+         backgroundColor: 'transparent',
+         color: '#fff', 
+         border: '2px solid rgba(255, 255, 255, 0.2)'
+      },
+      primary: {
+        padding: '10px 70px',
+        borderRadius:'4px',
+        backgroundColor: '#fff',
+        boxShadow: '2px solid rgba(255, 255, 255, 0.2)',
+      },
+    },
+  })}
 `;
+
+Button.defaultProps = {
+  variant: 'default'
+}
