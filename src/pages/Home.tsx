@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Input, Text, Button, Row, Column, List, Logo } from 'components';
+import { Input, Text, Button, Row, Column, List, Logo, Icon } from 'components';
 
 // Define o componente Home
 export const Home = () => {
@@ -35,6 +35,23 @@ export const Home = () => {
             START
           </Text>
         </Button>
+        <Row py="20px">
+          <Button variant="primary" p="10px 20px">
+            <Icon variant="play" />
+          </Button>
+          <Button variant="primary" p="10px 20px">
+            <Icon variant="pause" />
+          </Button>
+          <Button variant="primary" p="10px 20px">
+            <Icon variant="stop" />
+          </Button>
+          <Button variant="primary" p="10px 20px">
+            <Icon variant="restart" />
+          </Button>
+          <Button variant="primary" p="10px 20px">
+            <Icon variant="done" />
+          </Button>
+        </Row>
       </Column>
 
       <Text fontWeight="bold" fontSize="bodyLarge" my="10px" pl="10px">Tasks</Text>

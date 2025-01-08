@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { backgroundColor, boxShadow, variant } from "styled-system";
+import { space, SpaceProps, variant } from "styled-system";
 
-type ButtonProps = {
+type ButtonProps = SpaceProps & {
   variant: string
 }
 
@@ -21,10 +21,11 @@ export const Button = styled.button<ButtonProps>`
         padding: '10px 70px',
         borderRadius:'4px',
         backgroundColor: '#fff',
-        boxShadow: '2px solid rgba(255, 255, 255, 0.2)',
+        boxShadow: '2px solid rgba(255, 255, 255, 0.25)',
       },
     },
   })}
+  ${space}
 `;
 
 Button.defaultProps = {
